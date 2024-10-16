@@ -1,0 +1,27 @@
+<p>form works!</p>
+<p>template-form works!</p>
+<h1>Template Driven Form</h1>
+<div class="container">
+  <form>
+    <label for="firstname">Firstname</label>
+    <input type="text" name="firstname" id="firstname"><br>
+    
+    <label for="lastname">Lastname</label>
+    <input type="text" name="lastname" id="lastname"><br>
+    
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email"><br>
+    
+    <label for="gender">Gender</label>
+    <input type="radio" value="Male" name="gender">Male
+    <input type="radio" value="Female" name="gender">Female<br>
+    
+    <label for="country">Country</label>
+    <select name="Country" id="country"><br>
+      <option value="">Select</option>
+      <!-- Correctly use *ngFor and bind to country.name -->
+      <option *ngFor="let country of countrylist" [ngValue]="country.id">{{ country.name }}</option><br>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</div>
