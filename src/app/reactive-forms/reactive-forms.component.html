@@ -1,0 +1,39 @@
+<p>reactive-forms works!</p>
+<h1>Reactive Forms</h1>
+<div class="container">
+    <form [formGroup]="contactform" (submit)="onsubmit()">
+      <label for="firstname">Firstname</label>
+      <input type="text" name="firstname" id="firstname" formControlName="firstname"><br>
+      
+      <label for="lastname">Lastname</label>
+      <input type="text" name="lastname" id="lastname" formControlName="lastname"><br>
+      
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" formControlName="email"><br>
+      
+      <label for="gender">Gender</label>
+      <input type="radio" value="Male" name="gender" formControlName="gender">Male
+      <input type="radio" value="Female" name="gender" formControlName="gender">Female<br>
+      
+      <label for="country">Country</label>
+      <select name="Country" id="country" formControlName="country"><br>
+        <option value="">Select</option>
+        <option value="1">India</option>
+        <option value="2">USA</option>  
+        <option value="3">Paris</option><br>
+      </select>
+      <div formGroupName="address"> <!--for nested we use formGroupName -->
+        <label for="city">City</label>
+      <input type="text" name="city" id="city" formControlName="city"><br>
+
+      <label for="pincode">Pincode</label>
+      <input type="text" name="pincode" id="pincode" formControlName="pincode"><br>
+
+      <label for="street">Street</label>
+      <input type="text" name="street" id="street" formControlName="street"><br>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
